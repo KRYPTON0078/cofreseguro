@@ -1,0 +1,26 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://cofre:cofre@db:5432/cofreseguro
+      JWT_SECRET: compose-dev-secret-change-me-32chars
+      OLLAMA_ENABLED: "false"
+    depends_on:
+      - db
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: cofre
+      POSTGRES_PASSWORD: cofre
+      POSTGRES_DB: cofreseguro
+    ports:
+      - "5433:5432"
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    ports:
+      - "11434:11434"
