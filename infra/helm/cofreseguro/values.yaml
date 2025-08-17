@@ -1,0 +1,4 @@
+replicaCount: 1
+image:
+  repository: cofreseguro-api
+  tag: "0.1.0"
