@@ -1,0 +1,4 @@
+id: rule_025
+weight: 0.1
+enabled: true
+locales: [en, pt]
