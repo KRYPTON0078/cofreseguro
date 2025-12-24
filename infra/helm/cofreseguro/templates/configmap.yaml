@@ -1,0 +1,5 @@
+# configmap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cofreseguro-configmap
