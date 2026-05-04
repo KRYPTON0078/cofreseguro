@@ -15,10 +15,7 @@ async def enrich_with_llm(text: str, locale: str, risk_level: str) -> str | None
     prompt = (
         f"You are a mobile-money fraud analyst. Reply in {lang} only. "
         f"Risk level is {risk_level}. Explain briefly why this message may be risky "
-        f"and give one safety tip.
-
-Message:
-{text[:1500]}"
+        f"and give one safety tip.\n\nMessage:\n{text[:1500]}"
     )
     try:
         async with httpx.AsyncClient(timeout=settings.ollama_timeout_s) as client:
