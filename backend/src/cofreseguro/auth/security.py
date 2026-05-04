@@ -4,7 +4,7 @@ from datetime import UTC, datetime, timedelta
 
 import bcrypt
 from jose import JWTError, jwt
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 
 from cofreseguro.shared.config import get_settings
 
