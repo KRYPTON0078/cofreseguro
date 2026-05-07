@@ -1,6 +1,7 @@
 {
   "id": "pt-006",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 6"
+  "label": "fraud",
+  "category": "prize",
+  "text": "Foi seleccionado para prémio 92. Clique https://t.co/p006 e partilhe PIN"
 }
