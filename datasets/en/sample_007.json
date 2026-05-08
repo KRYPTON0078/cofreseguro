@@ -1,6 +1,7 @@
 {
   "id": "en-007",
   "locale": "en",
-  "label": "fraud",
-  "text": "URGENT send PIN https://bit.ly/x"
+  "label": "ham",
+  "category": "legit",
+  "text": "Airtime purchase of 27 MT completed successfully."
 }
