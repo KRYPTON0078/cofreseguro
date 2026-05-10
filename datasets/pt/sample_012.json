@@ -1,6 +1,7 @@
 {
   "id": "pt-012",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 12"
+  "label": "fraud",
+  "category": "agent",
+  "text": "Suporte Mkesh pede PIN para desbloquear reembolso de 134."
 }
