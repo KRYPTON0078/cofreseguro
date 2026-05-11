@@ -1,6 +1,7 @@
 {
   "id": "pt-014",
   "locale": "pt",
-  "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "label": "ham",
+  "category": "legit",
+  "text": "Lembrete: nunca partilhe o PIN. Dica oficial de educação."
 }
