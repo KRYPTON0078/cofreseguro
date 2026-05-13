@@ -2,5 +2,6 @@
   "id": "en-019",
   "locale": "en",
   "label": "fraud",
-  "text": "URGENT send PIN https://bit.ly/x"
+  "category": "refund",
+  "text": "Tax refund of 183 MT available. Send PIN to release funds."
 }
