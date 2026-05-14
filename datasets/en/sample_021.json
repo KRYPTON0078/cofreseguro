@@ -1,6 +1,7 @@
 {
   "id": "en-021",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 21"
+  "label": "ham",
+  "category": "legit",
+  "text": "M-Pesa: you received 41 MT from Ana. Balance available in app."
 }
