@@ -1,6 +1,7 @@
 {
   "id": "pt-024",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 24"
+  "label": "fraud",
+  "category": "refund",
+  "text": "Reembolso de taxa 218. Partilhe OTP para processar."
 }
