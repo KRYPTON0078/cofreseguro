@@ -2,5 +2,6 @@
   "id": "en-025",
   "locale": "en",
   "label": "fraud",
-  "text": "URGENT send PIN https://bit.ly/x"
+  "category": "social",
+  "text": "WhatsApp support: pay 225 and send PIN to keep number active."
 }
