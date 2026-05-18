@@ -1,6 +1,7 @@
 {
   "id": "pt-028",
   "locale": "pt",
-  "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "label": "ham",
+  "category": "legit",
+  "text": "O extracto da semana está pronto na aplicação oficial."
 }
