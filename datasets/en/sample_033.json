@@ -1,6 +1,7 @@
 {
   "id": "en-033",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 33"
+  "label": "fraud",
+  "category": "kyc",
+  "text": "Limited account: confirm details and OTP via https://cutt.ly/e033"
 }
