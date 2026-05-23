@@ -1,6 +1,7 @@
 {
   "id": "en-039",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 39"
+  "label": "fraud",
+  "category": "refund",
+  "text": "Overpaid fee refund 323. Share OTP to process transfer."
 }
