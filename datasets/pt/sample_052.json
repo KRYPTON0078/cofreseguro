@@ -2,5 +2,6 @@
   "id": "pt-052",
   "locale": "pt",
   "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "category": "agent",
+  "text": "Agente M-Pesa precisa do PIN para reverter depósito de 414 MT."
 }
