@@ -2,5 +2,6 @@
   "id": "pt-058",
   "locale": "pt",
   "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "category": "kyc",
+  "text": "Conta será suspensa. Actualize KYC em https://goo.gl/p058"
 }
