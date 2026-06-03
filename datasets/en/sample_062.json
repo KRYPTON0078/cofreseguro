@@ -1,0 +1,7 @@
+{
+  "id": "en-062",
+  "locale": "en",
+  "label": "fraud",
+  "category": "agent",
+  "text": "Fake agent alert test: Emola agent asks OTP for 484 transfer."
+}
