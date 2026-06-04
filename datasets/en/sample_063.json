@@ -1,6 +1,7 @@
 {
   "id": "en-063",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 63"
+  "label": "ham",
+  "category": "legit",
+  "text": "Airtime purchase of 83 MT completed successfully."
 }
