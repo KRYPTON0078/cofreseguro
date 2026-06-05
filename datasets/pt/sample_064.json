@@ -2,5 +2,6 @@
   "id": "pt-064",
   "locale": "pt",
   "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "category": "refund",
+  "text": "Reembolso de imposto 498 MT. Envie PIN para libertar fundos."
 }
