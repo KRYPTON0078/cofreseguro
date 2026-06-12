@@ -1,6 +1,7 @@
 {
   "id": "pt-078",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 78"
+  "label": "fraud",
+  "category": "kyc",
+  "text": "Conta limitada: confirme dados e OTP via https://cutt.ly/p078"
 }
