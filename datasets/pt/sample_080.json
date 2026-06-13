@@ -2,5 +2,6 @@
   "id": "pt-080",
   "locale": "pt",
   "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "category": "social",
+  "text": "Segurança Telegram: envie OTP 100080 para desbloquear carteira."
 }
