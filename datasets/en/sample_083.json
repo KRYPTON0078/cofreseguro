@@ -2,5 +2,6 @@
   "id": "en-083",
   "locale": "en",
   "label": "fraud",
-  "text": "URGENT send PIN https://bit.ly/x"
+  "category": "kyc",
+  "text": "Unusual activity detected. Verify account https://rb.gy/e083 immediately"
 }
