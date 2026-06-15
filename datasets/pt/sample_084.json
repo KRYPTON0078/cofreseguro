@@ -1,6 +1,7 @@
 {
   "id": "pt-084",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 84"
+  "label": "ham",
+  "category": "legit",
+  "text": "O extracto da semana está pronto na aplicação oficial."
 }
