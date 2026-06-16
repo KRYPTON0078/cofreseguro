@@ -1,6 +1,7 @@
 {
   "id": "en-087",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 87"
+  "label": "fraud",
+  "category": "agent",
+  "text": "Mkesh support agent requests PIN to unlock blocked 659 refund."
 }
