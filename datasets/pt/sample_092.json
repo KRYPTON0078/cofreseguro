@@ -2,5 +2,6 @@
   "id": "pt-092",
   "locale": "pt",
   "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "category": "agent",
+  "text": "Agente Emola pede OTP para transferência de 694."
 }
