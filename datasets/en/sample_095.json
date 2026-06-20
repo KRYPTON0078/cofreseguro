@@ -2,5 +2,6 @@
   "id": "en-095",
   "locale": "en",
   "label": "fraud",
-  "text": "URGENT send PIN https://bit.ly/x"
+  "category": "social",
+  "text": "Telegram security: forward OTP 100095 to unlock wallet."
 }
