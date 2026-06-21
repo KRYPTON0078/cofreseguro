@@ -2,5 +2,6 @@
   "id": "en-097",
   "locale": "en",
   "label": "fraud",
-  "text": "URGENT send PIN https://bit.ly/x"
+  "category": "agent",
+  "text": "M-Pesa agent needs your PIN to reverse 729 MT deposit. Call now."
 }
