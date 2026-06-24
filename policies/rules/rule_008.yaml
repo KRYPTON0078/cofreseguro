@@ -1,4 +1,9 @@
 id: rule_008
-weight: 0.1
+label: urgency
+weight: 0.15
 enabled: true
-locales: [en, pt]
+locales:
+- pt
+pattern: \b(urgente|imediatamente)\b
+description: Portuguese policy variant 8 for urgency. Tuned for demo corpus sample
+  alignment.
