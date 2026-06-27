@@ -1,4 +1,9 @@
 id: rule_021
-weight: 0.1
+label: credential_harvest
+weight: 0.36
 enabled: true
-locales: [en, pt]
+locales:
+- en
+pattern: \b(send|share).{0,12}(pin|otp)\b
+description: English policy variant 21 for credential_harvest. Tuned for demo corpus
+  sample alignment.
