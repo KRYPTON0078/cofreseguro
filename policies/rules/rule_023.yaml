@@ -1,4 +1,9 @@
 id: rule_023
-weight: 0.1
+label: phishing
+weight: 0.28
 enabled: true
-locales: [en, pt]
+locales:
+- en
+pattern: \b(verify|confirm).{0,16}(account|kyc)\b
+description: English policy variant 23 for phishing. Tuned for demo corpus sample
+  alignment.
