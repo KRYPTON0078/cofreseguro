@@ -1,4 +1,9 @@
 id: rule_034
-weight: 0.1
+label: fake_agent
+weight: 0.32
 enabled: true
-locales: [en, pt]
+locales:
+- pt
+pattern: \b(agente).{0,20}(pin|otp)\b
+description: Portuguese policy variant 34 for fake_agent. Tuned for demo corpus sample
+  alignment.
