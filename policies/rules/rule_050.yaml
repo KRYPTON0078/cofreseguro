@@ -1,4 +1,9 @@
 id: rule_050
-weight: 0.1
+label: brand_mention
+weight: 0.08
 enabled: true
-locales: [en, pt]
+locales:
+- pt
+pattern: \b(mpesa|m-pesa|emola|mkesh)\b
+description: Portuguese policy variant 50 for brand_mention. Tuned for demo corpus
+  sample alignment.
