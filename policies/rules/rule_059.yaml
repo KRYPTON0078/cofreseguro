@@ -1,4 +1,9 @@
 id: rule_059
-weight: 0.1
+label: short_link
+weight: 0.24
 enabled: true
-locales: [en, pt]
+locales:
+- en
+pattern: https?://(bit\.ly|tinyurl\.com|t\.co)/
+description: English policy variant 59 for short_link. Tuned for demo corpus sample
+  alignment.
