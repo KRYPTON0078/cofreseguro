@@ -1,4 +1,9 @@
 id: rule_062
-weight: 0.1
+label: prize_scam
+weight: 0.24
 enabled: true
-locales: [en, pt]
+locales:
+- pt
+pattern: \b(loteria|pr[eé]mio|ganhou)\b
+description: Portuguese policy variant 62 for prize_scam. Tuned for demo corpus sample
+  alignment.
