@@ -1,4 +1,9 @@
 id: rule_076
-weight: 0.1
+label: account_threat
+weight: 0.23
 enabled: true
-locales: [en, pt]
+locales:
+- pt
+pattern: \b(conta (suspensa|bloqueada))\b
+description: Portuguese policy variant 76 for account_threat. Tuned for demo corpus
+  sample alignment.
