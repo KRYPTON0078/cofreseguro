@@ -1,4 +1,9 @@
 id: rule_077
-weight: 0.1
+label: social_redirect
+weight: 0.26
 enabled: true
-locales: [en, pt]
+locales:
+- en
+pattern: \b(whatsapp|telegram).{0,30}(pin|otp)\b
+description: English policy variant 77 for social_redirect. Tuned for demo corpus
+  sample alignment.
