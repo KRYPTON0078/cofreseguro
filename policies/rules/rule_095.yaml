@@ -1,4 +1,9 @@
 id: rule_095
-weight: 0.1
+label: refund_scam
+weight: 0.2
 enabled: true
-locales: [en, pt]
+locales:
+- en
+pattern: \b(tax refund|government grant)\b
+description: English policy variant 95 for refund_scam. Tuned for demo corpus sample
+  alignment.
