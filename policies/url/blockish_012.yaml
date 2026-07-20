@@ -1,3 +1,5 @@
-id: url_frag_012
-weight: 0.1
-enabled: true
+id: blockish_012
+fragment: vodacom-secure-012
+weight: 0.22
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (vodacom-secure).
