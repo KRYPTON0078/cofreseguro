@@ -1,0 +1,8 @@
+id: rule_137
+label: invoice
+weight: 0.24
+enabled: true
+locales:
+- en
+pattern: (?:\b(unpaid\s+invoice|overdue\s+bill|pay\s+invoice\s+#?\d+)\b)|\b(asap)\b
+description: Unique invoice detector variant 137 (en).
