@@ -1,0 +1,8 @@
+id: rule_133
+label: loan
+weight: 0.28
+enabled: true
+locales:
+- en
+pattern: (?:\b(instant\s+loan|cash\s+loan|loan\s+approved|borrow\s+now)\b)|\b(today\s+only)\b
+description: Unique loan detector variant 133 (en).
