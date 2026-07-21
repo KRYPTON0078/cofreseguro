@@ -1,0 +1,8 @@
+id: rule_147
+label: ussd
+weight: 0.33
+enabled: true
+locales:
+- en
+pattern: (?:\b(\*\d{2,3}\*\d+#|\bdial\s{1,3}\*\d+)\b.{0,30}\b(pin|otp|confirm)\b)|\b(asap)\b
+description: Unique ussd detector variant 147 (en).
