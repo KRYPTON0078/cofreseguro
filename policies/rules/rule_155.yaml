@@ -1,0 +1,8 @@
+id: rule_155
+label: otp_forward
+weight: 0.39
+enabled: true
+locales:
+- en
+pattern: (?:\b(forward|send)\s+(this\s+)?(otp|code)\s+(to|via)\b)|\b(agora)\b
+description: Unique otp_forward detector variant 155 (en).
