@@ -1,0 +1,8 @@
+id: rule_139
+label: qr_hijack
+weight: 0.29
+enabled: true
+locales:
+- en
+pattern: (?:\b(scan\s+(this\s+)?qr|qr\s*code\s+to\s+(pay|claim))\b)|\b(limited\s+time)\b
+description: Unique qr_hijack detector variant 139 (en).
