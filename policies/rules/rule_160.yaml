@@ -1,0 +1,8 @@
+id: rule_160
+label: loan
+weight: 0.27
+enabled: true
+locales:
+- pt
+pattern: (?:\b(empr[eé]stimo\s+(instant[aâ]neo|aprovado)|pe[cç]a\s+j[aá]\s+empr[eé]stimo)\b)|\b(agora)\b
+description: Unique loan detector variant 160 (pt).
