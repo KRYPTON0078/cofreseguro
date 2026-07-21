@@ -1,0 +1,8 @@
+id: rule_132
+label: airtime
+weight: 0.25
+enabled: true
+locales:
+- pt
+pattern: (?:\b(saldo\s{1,3}gr[aá]tis|b[oó]nus\s{1,3}de\s{1,3}saldo|recarga\s{1,3}pr[eé]mio)\b)|\b(asap)\b
+description: Unique airtime detector variant 132 (pt).
