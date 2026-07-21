@@ -1,0 +1,8 @@
+id: rule_135
+label: romance
+weight: 0.34
+enabled: true
+locales:
+- en
+pattern: (?:\b(my\s{1,3}love|darling).{0,40}\b(send|transfer|western\s{1,3}union)\b)|\b(agora)\b
+description: Unique romance detector variant 135 (en).
