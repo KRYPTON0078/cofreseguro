@@ -1,0 +1,8 @@
+id: rule_123
+label: brand_mz
+weight: 0.21
+enabled: true
+locales:
+- en
+pattern: (?:\b(vodacom|emola|mkesh|bim|millennium\s*bim)\b.{0,40}\b(pin|otp|verify|verify)\b)|\b(today\s{1,3}only)\b
+description: Unique brand_mz detector variant 123 (en).
