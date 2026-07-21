@@ -1,0 +1,8 @@
+id: rule_101
+label: sim_swap
+weight: 0.32
+enabled: true
+locales:
+- en
+pattern: \b(sim\s*swap|swap(ped)?\s*(your\s*)?sim|new sim (card|activated))\b
+description: Unique sim_swap detector variant 101 (en).
