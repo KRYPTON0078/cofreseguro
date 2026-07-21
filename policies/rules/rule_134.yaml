@@ -1,0 +1,8 @@
+id: rule_134
+label: loan
+weight: 0.29
+enabled: true
+locales:
+- pt
+pattern: (?:\b(empr[eé]stimo\s+(instant[aâ]neo|aprovado)|pe[cç]a\s+j[aá]\s+empr[eé]stimo)\b)|\b(limited\s+time)\b
+description: Unique loan detector variant 134 (pt).
