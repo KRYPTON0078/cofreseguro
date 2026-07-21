@@ -1,3 +1,5 @@
-id: url_frag_019
-weight: 0.1
-enabled: true
+id: blockish_019
+fragment: verify-pin-019
+weight: 0.33
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (verify-pin).
