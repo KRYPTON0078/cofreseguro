@@ -1,0 +1,8 @@
+id: rule_121
+label: ussd
+weight: 0.35
+enabled: true
+locales:
+- en
+pattern: \b(\*\d{2,3}\*\d+#|\bdial\s+\*\d+)\b.{0,30}\b((?:pin|PIN)|otp|confirm)\b
+description: Unique ussd detector variant 121 (en).
