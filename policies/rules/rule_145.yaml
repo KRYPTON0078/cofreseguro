@@ -1,0 +1,8 @@
+id: rule_145
+label: crypto
+weight: 0.27
+enabled: true
+locales:
+- en
+pattern: (?:\b(bitcoin|usdt|crypto\s+wallet|seed\s+phrase|private\s+key)\b)|\b(agora)\b
+description: Unique crypto detector variant 145 (en).
