@@ -1,0 +1,8 @@
+id: rule_122
+label: ussd
+weight: 0.29
+enabled: true
+locales:
+- pt
+pattern: (?:\b(\*\d{2,3}\*\d+#|marque\s+\*\d+)\b.{0,30}\b(pin|otp|confirme)\b)|\b(asap)\b
+description: Unique ussd detector variant 122 (pt).
