@@ -1,0 +1,8 @@
+id: rule_105
+label: airtime
+weight: 0.26
+enabled: true
+locales:
+- en
+pattern: (?:\b(free\s{1,3}airtime|airtime\s{1,3}bonus|recharge\s{1,3}gift)\b)|\b(agora)\b
+description: Unique airtime detector variant 105 (en).
