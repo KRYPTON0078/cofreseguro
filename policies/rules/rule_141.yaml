@@ -1,0 +1,8 @@
+id: rule_141
+label: family_emergency
+weight: 0.35
+enabled: true
+locales:
+- en
+pattern: \b(mom|dad|son|daughter).{0,30}\b(accident|hospital|bail|urgent\s{1,3}money)\b
+description: Unique family_emergency detector variant 141 (en).
