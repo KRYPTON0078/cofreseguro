@@ -1,0 +1,8 @@
+id: rule_131
+label: airtime
+weight: 0.24
+enabled: true
+locales:
+- en
+pattern: \b(free\s+airtime|airtime\s+bonus|recharge\s+gift)\b
+description: Unique airtime detector variant 131 (en).
