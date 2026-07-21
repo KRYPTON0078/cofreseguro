@@ -1,0 +1,8 @@
+id: rule_103
+label: otp_forward
+weight: 0.36
+enabled: true
+locales:
+- en
+pattern: (?:\b(forward|send)\s+(this\s+)?(otp|code)\s+(to|via)\b)|\b(today\s+only)\b
+description: Unique otp_forward detector variant 103 (en).
