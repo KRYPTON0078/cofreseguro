@@ -1,0 +1,8 @@
+id: rule_161
+label: romance
+weight: 0.32
+enabled: true
+locales:
+- en
+pattern: \b(my\s+love|darling).{0,40}\b(send|transfer|western\s+union)\b
+description: Unique romance detector variant 161 (en).
