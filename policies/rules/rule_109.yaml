@@ -1,0 +1,8 @@
+id: rule_109
+label: romance
+weight: 0.29
+enabled: true
+locales:
+- en
+pattern: (?:\b(my\s+love|darling).{0,40}\b(send|transfer|western\s+union)\b)|\b(limited\s+time)\b
+description: Unique romance detector variant 109 (en).
