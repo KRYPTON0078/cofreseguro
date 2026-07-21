@@ -1,0 +1,8 @@
+id: rule_151
+label: brand_ao
+weight: 0.21
+enabled: true
+locales:
+- en
+pattern: \b(unitel|movicel|multicaixa)\b.{0,40}\b((?:pin|PIN)|otp|confirm)\b
+description: Unique brand_ao detector variant 151 (en).
