@@ -1,0 +1,8 @@
+id: rule_162
+label: romance
+weight: 0.33
+enabled: true
+locales:
+- pt
+pattern: (?:\b(meu\s{1,3}amor|querido).{0,40}\b(envie|transfira|western\s{1,3}union)\b)|\b(asap)\b
+description: Unique romance detector variant 162 (pt).
