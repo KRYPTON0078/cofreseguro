@@ -1,0 +1,8 @@
+id: rule_128
+label: sim_swap
+weight: 0.38
+enabled: true
+locales:
+- pt
+pattern: (?:\b(troca(r)?\s*de\s*sim|novo cart[aã]o sim|sim (foi )?trocad[oa])\b)|\b(today\s+only)\b
+description: Unique sim_swap detector variant 128 (pt).
