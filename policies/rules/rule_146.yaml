@@ -1,0 +1,8 @@
+id: rule_146
+label: crypto
+weight: 0.28
+enabled: true
+locales:
+- pt
+pattern: \b(bitcoin|usdt|carteira\s+crypto|frase\s+semente|chave\s+privada)\b
+description: Unique crypto detector variant 146 (pt).
