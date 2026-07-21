@@ -1,0 +1,8 @@
+id: rule_153
+label: sim_swap
+weight: 0.35
+enabled: true
+locales:
+- en
+pattern: (?:\b(sim\s*swap|swap(ped)?\s*(your\s*)?sim|new sim (card|activated))\b)|\b(today\s{1,3}only)\b
+description: Unique sim_swap detector variant 153 (en).
