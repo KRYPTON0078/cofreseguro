@@ -1,0 +1,8 @@
+id: rule_130
+label: otp_forward
+weight: 0.35
+enabled: true
+locales:
+- pt
+pattern: (?:\b(encaminhe|envie)\s+(este\s+)?(otp|c[oó]digo)\s+(para|via)\b)|\b(agora)\b
+description: Unique otp_forward detector variant 130 (pt).
