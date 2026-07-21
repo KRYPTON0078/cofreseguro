@@ -1,0 +1,8 @@
+id: rule_119
+label: crypto
+weight: 0.29
+enabled: true
+locales:
+- en
+pattern: (?:\b(bitcoin|usdt|crypto\s+wallet|seed\s+phrase|private\s+key)\b)|\b(limited\s+time)\b
+description: Unique crypto detector variant 119 (en).
