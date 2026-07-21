@@ -1,0 +1,8 @@
+id: rule_143
+label: job_offer
+weight: 0.27
+enabled: true
+locales:
+- en
+pattern: (?:\b(work\s+from\s+home|job\s+offer|hiring\s+now).{0,40}\b(pay\s+fee|registration\s+fee|send\s+cv\s+fee)\b)|\b(today\s+only)\b
+description: Unique job_offer detector variant 143 (en).
