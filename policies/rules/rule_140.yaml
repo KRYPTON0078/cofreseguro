@@ -1,0 +1,8 @@
+id: rule_140
+label: qr_hijack
+weight: 0.3
+enabled: true
+locales:
+- pt
+pattern: (?:\b(digitalize\s+(este\s+)?qr|c[oó]digo\s+qr\s+para\s+(pagar|receber))\b)|\b(agora)\b
+description: Unique qr_hijack detector variant 140 (pt).
