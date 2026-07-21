@@ -1,0 +1,8 @@
+id: rule_159
+label: loan
+weight: 0.26
+enabled: true
+locales:
+- en
+pattern: (?:\b(instant\s{1,3}loan|cash\s{1,3}loan|loan\s{1,3}approved|borrow\s{1,3}now)\b)|\b(limited\s{1,3}time)\b
+description: Unique loan detector variant 159 (en).
