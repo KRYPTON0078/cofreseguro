@@ -1,0 +1,8 @@
+id: rule_115
+label: family_emergency
+weight: 0.3
+enabled: true
+locales:
+- en
+pattern: (?:\b(mom|dad|son|daughter).{0,30}\b(accident|hospital|bail|urgent\s+money)\b)|\b(agora)\b
+description: Unique family_emergency detector variant 115 (en).
