@@ -1,0 +1,8 @@
+id: rule_112
+label: invoice
+weight: 0.27
+enabled: true
+locales:
+- pt
+pattern: (?:\b(factura?\s+em\s+atraso|fatura\s+por\s+pagar|pague\s+a\s+factura)\b)|\b(asap)\b
+description: Unique invoice detector variant 112 (pt).
