@@ -1,0 +1,8 @@
+id: rule_156
+label: otp_forward
+weight: 0.4
+enabled: true
+locales:
+- pt
+pattern: \b(encaminhe|envie)\s{1,3}(este\s{1,3})?(otp|c[oó]digo)\s{1,3}(para|via)\b
+description: Unique otp_forward detector variant 156 (pt).
