@@ -1,0 +1,8 @@
+id: rule_192
+label: qr_hijack
+weight: 0.26
+enabled: true
+locales:
+- pt
+pattern: (?:\b(digitalize\s{1,3}(este\s{1,3})?qr|c[oó]digo\s{1,3}qr\s{1,3}para\s{1,3}(pagar|receber))\b)|\b(asap)\b
+description: Unique qr_hijack detector variant 192 (pt).
