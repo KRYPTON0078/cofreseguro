@@ -1,3 +1,5 @@
-id: url_frag_021
-weight: 0.1
-enabled: true
+id: blockish_021
+fragment: mpesa-login-021
+weight: 0.26
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (mpesa-login).
