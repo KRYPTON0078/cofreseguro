@@ -1,0 +1,8 @@
+id: rule_172
+label: crypto
+weight: 0.26
+enabled: true
+locales:
+- pt
+pattern: (?:\b(bitcoin|usdt|carteira\s+crypto|frase\s+semente|chave\s+privada)\b)|\b(asap)\b
+description: Unique crypto detector variant 172 (pt).
