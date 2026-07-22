@@ -1,0 +1,5 @@
+id: blockish_100
+fragment: agent-cashout-100
+weight: 0.24
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for agent-cashout family.
