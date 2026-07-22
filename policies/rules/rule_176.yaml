@@ -1,0 +1,8 @@
+id: rule_176
+label: brand_mz
+weight: 0.25
+enabled: true
+locales:
+- pt
+pattern: \b(vodacom|emola|mkesh|bim)\b.{0,40}\b(pin|otp|verifique)\b
+description: Unique brand_mz detector variant 176 (pt).
