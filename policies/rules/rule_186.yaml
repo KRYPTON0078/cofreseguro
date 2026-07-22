@@ -1,0 +1,8 @@
+id: rule_186
+label: loan
+weight: 0.25
+enabled: true
+locales:
+- pt
+pattern: \b(empr[eé]stimo\s{1,3}(instant[aâ]neo|aprovado)|pe[cç]a\s{1,3}j[aá]\s{1,3}empr[eé]stimo)\b
+description: Unique loan detector variant 186 (pt).
