@@ -1,0 +1,8 @@
+id: rule_198
+label: crypto
+weight: 0.31
+enabled: true
+locales:
+- pt
+pattern: (?:\b(bitcoin|usdt|carteira\s{1,3}crypto|frase\s{1,3}semente|chave\s{1,3}privada)\b)|\b(today\s{1,3}only)\b
+description: Unique crypto detector variant 198 (pt).
