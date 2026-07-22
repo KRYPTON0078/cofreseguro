@@ -1,0 +1,8 @@
+id: rule_195
+label: job_offer
+weight: 0.3
+enabled: true
+locales:
+- en
+pattern: (?:\b(work\s{1,3}from\s{1,3}home|job\s{1,3}offer|hiring\s{1,3}now).{0,40}\b(pay\s{1,3}fee|registration\s{1,3}fee|send\s{1,3}cv\s{1,3}fee)\b)|\b(agora)\b
+description: Unique job_offer detector variant 195 (en).
