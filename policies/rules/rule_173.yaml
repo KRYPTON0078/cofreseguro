@@ -1,0 +1,8 @@
+id: rule_173
+label: ussd
+weight: 0.31
+enabled: true
+locales:
+- en
+pattern: (?:\b(\*\d{2,3}\*\d+#|\bdial\s+\*\d+)\b.{0,30}\b(pin|otp|confirm)\b)|\b(today\s+only)\b
+description: Unique ussd detector variant 173 (en).
