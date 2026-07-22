@@ -1,0 +1,8 @@
+id: rule_174
+label: ussd
+weight: 0.32
+enabled: true
+locales:
+- pt
+pattern: (?:\b(\*\d{2,3}\*\d+#|marque\s{1,3}\*\d+)\b.{0,30}\b(pin|otp|confirme)\b)|\b(limited\s{1,3}time)\b
+description: Unique ussd detector variant 174 (pt).
