@@ -1,0 +1,8 @@
+id: rule_178
+label: brand_ao
+weight: 0.2
+enabled: true
+locales:
+- pt
+pattern: (?:\b(unitel|movicel|multicaixa)\b.{0,40}\b((?:pin|PIN)|otp|confirme)\b)|\b(today\s+only)\b
+description: Unique brand_ao detector variant 178 (pt).
