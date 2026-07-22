@@ -1,0 +1,8 @@
+id: rule_183
+label: airtime
+weight: 0.27
+enabled: true
+locales:
+- en
+pattern: (?:\b(free\s{1,3}airtime|airtime\s{1,3}bonus|recharge\s{1,3}gift)\b)|\b(today\s{1,3}only)\b
+description: Unique airtime detector variant 183 (en).
