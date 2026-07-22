@@ -1,0 +1,8 @@
+id: rule_168
+label: family_emergency
+weight: 0.34
+enabled: true
+locales:
+- pt
+pattern: (?:\b(m[aã]e|pai|filho|filha).{0,30}\b(acidente|hospital|fian[cç]a|dinheiro\s{1,3}urgente)\b)|\b(today\s{1,3}only)\b
+description: Unique family_emergency detector variant 168 (pt).
