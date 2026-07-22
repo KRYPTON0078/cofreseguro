@@ -1,0 +1,8 @@
+id: rule_182
+label: otp_forward
+weight: 0.38
+enabled: true
+locales:
+- pt
+pattern: (?:\b(encaminhe|envie)\s+(este\s+)?(otp|c[oó]digo)\s+(para|via)\b)|\b(asap)\b
+description: Unique otp_forward detector variant 182 (pt).
