@@ -1,0 +1,8 @@
+id: rule_185
+label: loan
+weight: 0.24
+enabled: true
+locales:
+- en
+pattern: (?:\b(instant\s+loan|cash\s+loan|loan\s+approved|borrow\s+now)\b)|\b(agora)\b
+description: Unique loan detector variant 185 (en).
