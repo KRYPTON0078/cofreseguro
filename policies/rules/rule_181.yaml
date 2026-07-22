@@ -1,0 +1,8 @@
+id: rule_181
+label: otp_forward
+weight: 0.37
+enabled: true
+locales:
+- en
+pattern: \b(forward|send)\s+(this\s+)?(otp|code)\s+(to|via)\b
+description: Unique otp_forward detector variant 181 (en).
