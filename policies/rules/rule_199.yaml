@@ -1,0 +1,8 @@
+id: rule_199
+label: ussd
+weight: 0.29
+enabled: true
+locales:
+- en
+pattern: (?:\b(\*\d{2,3}\*\d+#|\bdial\s+\*\d+)\b.{0,30}\b((?:pin|PIN)|otp|confirm)\b)|\b(limited\s+time)\b
+description: Unique ussd detector variant 199 (en).
