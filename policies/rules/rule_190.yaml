@@ -1,0 +1,8 @@
+id: rule_190
+label: invoice
+weight: 0.28
+enabled: true
+locales:
+- pt
+pattern: (?:\b(factura?\s+em\s+atraso|fatura\s+por\s+pagar|pague\s+a\s+factura)\b)|\b(agora)\b
+description: Unique invoice detector variant 190 (pt).
