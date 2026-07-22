@@ -1,0 +1,8 @@
+id: rule_179
+label: sim_swap
+weight: 0.33
+enabled: true
+locales:
+- en
+pattern: (?:\b(sim\s*swap|swap(ped)?\s*(your\s*)?sim|new sim (card|activated))\b)|\b(limited\s+time)\b
+description: Unique sim_swap detector variant 179 (en).
