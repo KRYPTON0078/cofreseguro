@@ -1,0 +1,8 @@
+id: rule_189
+label: invoice
+weight: 0.27
+enabled: true
+locales:
+- en
+pattern: (?:\b(unpaid\s{1,3}invoice|overdue\s{1,3}bill|pay\s{1,3}invoice\s{1,3}#?\d+)\b)|\b(limited\s{1,3}time)\b
+description: Unique invoice detector variant 189 (en).
