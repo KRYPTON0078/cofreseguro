@@ -1,0 +1,8 @@
+id: rule_184
+label: airtime
+weight: 0.28
+enabled: true
+locales:
+- pt
+pattern: (?:\b(saldo\s+gr[aá]tis|b[oó]nus\s+de\s+saldo|recarga\s+pr[eé]mio)\b)|\b(limited\s+time)\b
+description: Unique airtime detector variant 184 (pt).
