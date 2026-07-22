@@ -1,0 +1,8 @@
+id: rule_188
+label: romance
+weight: 0.31
+enabled: true
+locales:
+- pt
+pattern: (?:\b(meu\s+amor|querido).{0,40}\b(envie|transfira|western\s+union)\b)|\b(today\s+only)\b
+description: Unique romance detector variant 188 (pt).
