@@ -1,0 +1,5 @@
+id: blockish_081
+fragment: sim-swap-portal-081
+weight: 0.29
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for sim-swap-portal family.
