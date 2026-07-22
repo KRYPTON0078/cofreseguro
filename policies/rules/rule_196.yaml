@@ -1,0 +1,8 @@
+id: rule_196
+label: job_offer
+weight: 0.31
+enabled: true
+locales:
+- pt
+pattern: \b(trabalhe\s+em\s+casa|oferta\s+de\s+emprego).{0,40}\b(taxa\s+de\s+inscri[cç][aã]o|pague\s+taxa)\b
+description: Unique job_offer detector variant 196 (pt).
