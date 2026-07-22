@@ -1,0 +1,8 @@
+id: rule_175
+label: brand_mz
+weight: 0.24
+enabled: true
+locales:
+- en
+pattern: (?:\b(vodacom|emola|mkesh|bim|millennium\s*bim)\b.{0,40}\b((?:pin|PIN)|otp|verify|verify)\b)|\b(agora)\b
+description: Unique brand_mz detector variant 175 (en).
