@@ -1,0 +1,8 @@
+id: rule_164
+label: invoice
+weight: 0.23
+enabled: true
+locales:
+- pt
+pattern: (?:\b(factura?\s+em\s+atraso|fatura\s+por\s+pagar|pague\s+a\s+factura)\b)|\b(limited\s+time)\b
+description: Unique invoice detector variant 164 (pt).
