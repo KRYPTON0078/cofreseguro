@@ -1,0 +1,8 @@
+id: rule_197
+label: crypto
+weight: 0.3
+enabled: true
+locales:
+- en
+pattern: (?:\b(bitcoin|usdt|crypto\s+wallet|seed\s+phrase|private\s+key)\b)|\b(asap)\b
+description: Unique crypto detector variant 197 (en).
