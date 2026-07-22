@@ -1,0 +1,8 @@
+id: rule_194
+label: family_emergency
+weight: 0.32
+enabled: true
+locales:
+- pt
+pattern: (?:\b(m[aã]e|pai|filho|filha).{0,30}\b(acidente|hospital|fian[cç]a|dinheiro\s+urgente)\b)|\b(limited\s+time)\b
+description: Unique family_emergency detector variant 194 (pt).
