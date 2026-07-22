@@ -1,0 +1,8 @@
+id: rule_180
+label: sim_swap
+weight: 0.34
+enabled: true
+locales:
+- pt
+pattern: (?:\b(troca(r)?\s*de\s*sim|novo cart[aã]o sim|sim (foi )?trocad[oa])\b)|\b(agora)\b
+description: Unique sim_swap detector variant 180 (pt).
