@@ -1,0 +1,8 @@
+id: rule_191
+label: qr_hijack
+weight: 0.32
+enabled: true
+locales:
+- en
+pattern: \b(scan\s+(this\s+)?qr|qr\s*code\s+to\s+(pay|claim))\b
+description: Unique qr_hijack detector variant 191 (en).
