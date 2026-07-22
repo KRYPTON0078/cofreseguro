@@ -1,0 +1,5 @@
+id: blockish_084
+fragment: instant-loan-app-084
+weight: 0.26
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for instant-loan-app family.
