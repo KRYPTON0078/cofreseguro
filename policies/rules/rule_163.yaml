@@ -1,0 +1,8 @@
+id: rule_163
+label: invoice
+weight: 0.29
+enabled: true
+locales:
+- en
+pattern: (?:\b(unpaid\s+invoice|overdue\s+bill|pay\s+invoice\s+#?\d+)\b)|\b(today\s+only)\b
+description: Unique invoice detector variant 163 (en).
