@@ -1,0 +1,5 @@
+id: blockish_132
+fragment: vodacom-kyc-132
+weight: 0.23
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for vodacom-kyc family.
