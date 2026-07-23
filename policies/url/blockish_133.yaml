@@ -1,0 +1,5 @@
+id: blockish_133
+fragment: emola-unlock-133
+weight: 0.24
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for emola-unlock family.
