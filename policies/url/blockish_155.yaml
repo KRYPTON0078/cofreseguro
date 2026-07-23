@@ -1,0 +1,5 @@
+id: blockish_155
+fragment: unitel-promo-155
+weight: 0.2
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for unitel-promo family.
