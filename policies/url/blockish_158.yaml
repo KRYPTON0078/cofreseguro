@@ -1,0 +1,5 @@
+id: blockish_158
+fragment: xn--mpesa-158
+weight: 0.38
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for xn--mpesa family.
