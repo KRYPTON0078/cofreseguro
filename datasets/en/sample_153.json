@@ -1,6 +1,7 @@
 {
   "id": "en-153",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 153"
+  "label": "fraud",
+  "category": "airtime",
+  "text": "You won free airtime 139 MT. Claim at https://cutt.ly/air3 with PIN."
 }
