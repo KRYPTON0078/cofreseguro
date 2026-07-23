@@ -1,0 +1,5 @@
+id: blockish_111
+fragment: ussd-confirm-111
+weight: 0.26
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for ussd-confirm family.
