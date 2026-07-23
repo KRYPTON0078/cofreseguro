@@ -1,3 +1,5 @@
-id: url_frag_026
-weight: 0.1
-enabled: true
+id: blockish_026
+fragment: free-airtime-026
+weight: 0.17
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (free-airtime).
