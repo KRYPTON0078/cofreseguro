@@ -1,0 +1,5 @@
+id: blockish_139
+fragment: wallet-drain-139
+weight: 0.33
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for wallet-drain family.
