@@ -1,0 +1,5 @@
+id: blockish_147
+fragment: qr-claim-147
+weight: 0.26
+reason: suspicious_path_or_host_token
+notes: Unique URL intel fragment for qr-claim family.
