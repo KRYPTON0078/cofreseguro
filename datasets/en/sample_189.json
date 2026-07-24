@@ -1,6 +1,7 @@
 {
   "id": "en-189",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 189"
+  "label": "fraud",
+  "category": "job_offer",
+  "text": "Work from home hiring. Pay registration fee 607 then send OTP."
 }
