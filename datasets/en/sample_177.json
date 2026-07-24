@@ -1,6 +1,7 @@
 {
   "id": "en-177",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 177"
+  "label": "fraud",
+  "category": "qr_hijack",
+  "text": "Scan QR to receive 451 MT refund. Confirm with OTP after scan."
 }
