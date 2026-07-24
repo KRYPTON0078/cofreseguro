@@ -1,3 +1,5 @@
-id: url_frag_028
-weight: 0.1
-enabled: true
+id: blockish_028
+fragment: refund-now-028
+weight: 0.18
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (refund-now).
