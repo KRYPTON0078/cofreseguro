@@ -2,5 +2,6 @@
   "id": "en-161",
   "locale": "en",
   "label": "fraud",
-  "text": "URGENT send PIN https://bit.ly/x"
+  "category": "sim_swap",
+  "text": "ALERT: Your SIM was swapped. Call 840000011 and share OTP to reverse. https://bit.ly/ss11"
 }
