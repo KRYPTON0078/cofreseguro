@@ -2,5 +2,6 @@
   "id": "pt-152",
   "locale": "pt",
   "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "category": "otp_forward",
+  "text": "Segurança: encaminhe este OTP 100002 ao suporte WhatsApp agora."
 }
