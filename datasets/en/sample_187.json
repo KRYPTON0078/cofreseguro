@@ -2,5 +2,6 @@
   "id": "en-187",
   "locale": "en",
   "label": "fraud",
-  "text": "URGENT send PIN https://bit.ly/x"
+  "category": "qr_hijack",
+  "text": "Scan QR to receive 581 MT refund. Confirm with OTP after scan."
 }
