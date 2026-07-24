@@ -1,6 +1,7 @@
 {
   "id": "en-171",
   "locale": "en",
-  "label": "benign",
-  "text": "Balance update 171"
+  "label": "fraud",
+  "category": "sim_swap",
+  "text": "ALERT: Your SIM was swapped. Call 840000021 and share OTP to reverse. https://bit.ly/ss21"
 }
