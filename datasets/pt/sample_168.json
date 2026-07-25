@@ -1,6 +1,7 @@
 {
   "id": "pt-168",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 168"
+  "label": "fraud",
+  "category": "family_emergency",
+  "text": "Pai no acidente. Preciso fiança 334 MT. Envie PIN."
 }
