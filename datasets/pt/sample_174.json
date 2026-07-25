@@ -1,6 +1,7 @@
 {
   "id": "pt-174",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 174"
+  "label": "fraud",
+  "category": "loan",
+  "text": "Empréstimo 412 MT aprovado. Pague taxa e confirme com PIN."
 }
