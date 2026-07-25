@@ -2,5 +2,6 @@
   "id": "pt-196",
   "locale": "pt",
   "label": "fraud",
-  "text": "URGENTE envie PIN https://bit.ly/x"
+  "category": "invoice",
+  "text": "Factura em atraso #46. Pague https://rb.gy/inv46 ou conta bloqueada."
 }
