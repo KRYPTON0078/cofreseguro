@@ -1,6 +1,7 @@
 {
   "id": "pt-192",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 192"
+  "label": "fraud",
+  "category": "otp_forward",
+  "text": "Segurança: encaminhe este OTP 100042 ao suporte WhatsApp agora."
 }
