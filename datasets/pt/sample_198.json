@@ -1,6 +1,7 @@
 {
   "id": "pt-198",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 198"
+  "label": "fraud",
+  "category": "family_emergency",
+  "text": "Pai no acidente. Preciso fiança 724 MT. Envie PIN."
 }
