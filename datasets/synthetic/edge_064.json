@@ -1,0 +1,7 @@
+{
+  "id": "syn-064",
+  "locale": "pt",
+  "label": "fraud",
+  "category": "adversarial",
+  "text": "dial *150*64# and confirm otp"
+}
