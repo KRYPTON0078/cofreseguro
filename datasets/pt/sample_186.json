@@ -1,6 +1,7 @@
 {
   "id": "pt-186",
   "locale": "pt",
-  "label": "benign",
-  "text": "Balance update 186"
+  "label": "fraud",
+  "category": "invoice",
+  "text": "Factura em atraso #36. Pague https://rb.gy/inv36 ou conta bloqueada."
 }
