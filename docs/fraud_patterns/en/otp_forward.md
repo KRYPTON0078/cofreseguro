@@ -1,3 +1,14 @@
-# otp_forward (en)
+# Otp Forward (en)
 
-Educational fraud pattern for CofreSeguro.
+## Signals
+- Credential or fee pressure tied to otp_forward
+- Short links or USSD prompts
+- Urgency / fear language
+
+## Example mitigation
+- Stop
+- Open official app
+- Call known operator support
+
+## Demo note
+Use dataset samples tagged category=otp_forward.
