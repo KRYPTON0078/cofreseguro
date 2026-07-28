@@ -32,6 +32,10 @@ dev = [
   "ruff>=0.8.0",
   "httpx>=0.28.0",
 ]
+ocr = [
+  "pillow>=10.4.0",
+  "pytesseract>=0.3.10",
+]
 
 [build-system]
 requires = ["hatchling"]
