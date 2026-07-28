@@ -1,14 +1,15 @@
-"""Ensemble fraud analysis pipeline."""
+"""Ensemble fraud analysis pipeline with tunable fusion weights."""
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from cofreseguro.analyze.llm_ollama import enrich_with_llm
 from cofreseguro.analyze.ml_scorer import score_text
 from cofreseguro.analyze.rules import evaluate_rules
 from cofreseguro.analyze.url_score import score_urls_in_text
 from cofreseguro.literacy.tips import tip_for
+from cofreseguro.shared.config import get_settings
 
 
 @dataclass
@@ -20,6 +21,7 @@ class AnalysisResult:
     tip: str
     engine: str
     url_scores: list[dict]
+    engine_scores: dict[str, float] = field(default_factory=dict)
 
 
 def _level(score: float) -> str:
@@ -45,6 +47,7 @@ def _explain(locale: str, labels: list[str], score: float, engine: str) -> str:
 
 
 async def analyze_text(text: str, locale: str = "en") -> AnalysisResult:
+    settings = get_settings()
     rule_score, hits = evaluate_rules(text, locale)
     labels = [h.label for h in hits]
     ml = score_text(text)
@@ -52,7 +55,10 @@ async def analyze_text(text: str, locale: str = "en") -> AnalysisResult:
     url_boost = max((u.score for u in url_results), default=0.0)
     for u in url_results:
         labels.extend(u.reasons)
-    fused = min(1.0, 0.45 * rule_score + 0.35 * ml.score + 0.35 * url_boost)
+    w_rules = settings.fusion_weight_rules
+    w_ml = settings.fusion_weight_ml
+    w_url = settings.fusion_weight_url
+    fused = min(1.0, w_rules * rule_score + w_ml * ml.score + w_url * url_boost)
     level = _level(fused)
     engine = "rules+ml+url"
     explanation = _explain(locale, labels, fused, engine)
@@ -61,6 +67,12 @@ async def analyze_text(text: str, locale: str = "en") -> AnalysisResult:
         explanation = llm_text
         engine = "rules+ml+url+llm"
     tip = tip_for(labels, locale)
+    engine_scores = {
+        "rules": round(rule_score, 4),
+        "ml": round(ml.score, 4),
+        "url": round(url_boost, 4),
+        "fused": round(fused, 4),
+    }
     return AnalysisResult(
         risk_score=round(fused, 4),
         risk_level=level,
@@ -69,4 +81,5 @@ async def analyze_text(text: str, locale: str = "en") -> AnalysisResult:
         tip=tip,
         engine=engine,
         url_scores=[{"url": u.url, "score": u.score, "reasons": u.reasons} for u in url_results],
+        engine_scores=engine_scores,
     )
