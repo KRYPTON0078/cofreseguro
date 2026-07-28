@@ -8,19 +8,23 @@ from fastapi.responses import JSONResponse, PlainTextResponse
 from sqlalchemy import select, text
 
 from cofreseguro import __version__
+from cofreseguro.admin.router import router as admin_router
 from cofreseguro.analyze.router import router as analyze_router
 from cofreseguro.auth.router import router as auth_router
 from cofreseguro.auth.security import hash_password
 from cofreseguro.behaviour.router import router as behaviour_router
+from cofreseguro.feedback.router import router as feedback_router
+from cofreseguro.literacy.router import router as tips_router
 from cofreseguro.shared.config import get_settings
 from cofreseguro.shared.database import get_engine, get_session_factory, init_db
 from cofreseguro.shared.logging import configure_logging, get_logger
 from cofreseguro.shared.metrics import metrics_response
 from cofreseguro.shared.models import User
-from cofreseguro.shared.rate_limit import analyze_limiter
+from cofreseguro.shared.rate_limit import SlidingWindowLimiter, analyze_limiter
 
 configure_logging()
 logger = get_logger("api")
+auth_limiter = SlidingWindowLimiter(max_requests=30, window_s=60.0)
 
 
 async def seed_demo_users() -> None:
@@ -56,6 +60,8 @@ async def lifespan(_app: FastAPI):
 
 def create_app() -> FastAPI:
     settings = get_settings()
+    analyze_limiter.max_requests = settings.rate_limit_analyze
+    auth_limiter.max_requests = settings.rate_limit_auth
     app = FastAPI(title=settings.app_name, version=__version__, lifespan=lifespan)
     app.add_middleware(
         CORSMiddleware,
@@ -67,13 +73,26 @@ def create_app() -> FastAPI:
     app.include_router(auth_router)
     app.include_router(analyze_router)
     app.include_router(behaviour_router)
+    app.include_router(admin_router)
+    app.include_router(feedback_router)
+    app.include_router(tips_router)
 
     @app.middleware("http")
-    async def rate_limit_analyze(request: Request, call_next):
-        if request.url.path.startswith("/v1/analyze"):
-            client = request.client.host if request.client else "unknown"
-            if not analyze_limiter.allow(client):
-                return JSONResponse({"detail": "rate limit exceeded"}, status_code=429)
+    async def rate_limit_middleware(request: Request, call_next):
+        client = request.client.host if request.client else "unknown"
+        path = request.url.path
+        if path.startswith("/v1/analyze") and not analyze_limiter.allow(client):
+            return JSONResponse(
+                {"detail": "rate limit exceeded"},
+                status_code=429,
+                headers={"Retry-After": "60"},
+            )
+        if path.startswith("/v1/auth/") and not auth_limiter.allow(client):
+            return JSONResponse(
+                {"detail": "rate limit exceeded"},
+                status_code=429,
+                headers={"Retry-After": "60"},
+            )
         return await call_next(request)
 
     @app.get("/health")
