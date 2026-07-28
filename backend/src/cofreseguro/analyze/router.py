@@ -33,6 +33,7 @@ class AnalyzeOut(BaseModel):
     tip: str
     engine: str
     url_scores: list[dict]
+    engine_scores: dict[str, float] = {}
 
 
 @router.post("/analyze", response_model=AnalyzeOut)
@@ -51,6 +52,7 @@ async def analyze(body: AnalyzeIn, user: User = Depends(get_current_user)) -> An
             explanation=result.explanation,
             tip=result.tip,
             engine=result.engine,
+            engine_scores=json.dumps(result.engine_scores),
         )
         session.add(row)
         await session.flush()
@@ -77,6 +79,7 @@ async def analyze(body: AnalyzeIn, user: User = Depends(get_current_user)) -> An
         tip=result.tip,
         engine=result.engine,
         url_scores=result.url_scores,
+        engine_scores=result.engine_scores,
     )
 
 
@@ -87,14 +90,14 @@ async def analyze_image(
     user: User = Depends(get_current_user),
 ) -> AnalyzeOut:
     data = await file.read()
-    text, available = extract_text_from_image(data)
+    text, available = extract_text_from_image(data, locale=locale)
     if not available or not text:
         text = "[ocr_unavailable] Please paste the SMS text manually."
     return await analyze(AnalyzeIn(text=text, locale=locale), user)
 
 
 @router.get("/history")
-async def history(limit: int = 20, user: User = Depends(get_current_user)) -> list[dict]:
+async def history(limit: int = 20, offset: int = 0, user: User = Depends(get_current_user)) -> list[dict]:
     factory = get_session_factory()
     async with factory() as session:
         rows = (
@@ -102,6 +105,7 @@ async def history(limit: int = 20, user: User = Depends(get_current_user)) -> li
                 select(Analysis)
                 .where(Analysis.user_id == user.id)
                 .order_by(desc(Analysis.id))
+                .offset(max(offset, 0))
                 .limit(min(limit, 100))
             )
         ).scalars().all()
@@ -118,3 +122,55 @@ async def history(limit: int = 20, user: User = Depends(get_current_user)) -> li
         }
         for r in rows
     ]
+
+
+@router.get("/history/{analysis_id}")
+async def history_detail(analysis_id: int, user: User = Depends(get_current_user)) -> dict:
+    factory = get_session_factory()
+    async with factory() as session:
+        row = (
+            await session.execute(
+                select(Analysis).where(Analysis.id == analysis_id, Analysis.user_id == user.id)
+            )
+        ).scalar_one_or_none()
+        if not row:
+            from fastapi import HTTPException
+
+            raise HTTPException(status_code=404, detail="not found")
+        urls = (
+            await session.execute(select(UrlCheck).where(UrlCheck.analysis_id == row.id))
+        ).scalars().all()
+    return {
+        "id": row.id,
+        "text": row.text,
+        "locale": row.locale,
+        "risk_level": row.risk_level,
+        "risk_score": row.risk_score,
+        "labels": json.loads(row.labels),
+        "explanation": row.explanation,
+        "tip": row.tip,
+        "engine": row.engine,
+        "engine_scores": json.loads(row.engine_scores or "{}"),
+        "url_scores": [
+            {"url": u.url, "score": u.score, "reasons": json.loads(u.reasons)} for u in urls
+        ],
+        "created_at": row.created_at.isoformat() if row.created_at else None,
+    }
+
+
+@router.delete("/history/{analysis_id}")
+async def history_delete(analysis_id: int, user: User = Depends(get_current_user)) -> dict:
+    factory = get_session_factory()
+    async with factory() as session:
+        row = (
+            await session.execute(
+                select(Analysis).where(Analysis.id == analysis_id, Analysis.user_id == user.id)
+            )
+        ).scalar_one_or_none()
+        if not row:
+            from fastapi import HTTPException
+
+            raise HTTPException(status_code=404, detail="not found")
+        await session.delete(row)
+        await session.commit()
+    return {"deleted": analysis_id}
