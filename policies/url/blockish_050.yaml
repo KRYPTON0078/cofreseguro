@@ -1,3 +1,5 @@
-id: url_frag_050
-weight: 0.1
-enabled: true
+id: blockish_050
+fragment: bonus-mt-050
+weight: 0.18
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (bonus-mt).
