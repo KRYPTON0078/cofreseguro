@@ -1,0 +1,7 @@
+{
+  "id": "en-231",
+  "locale": "en",
+  "label": "fraud",
+  "category": "ussd",
+  "text": "Dial *150*31# urgently and enter PIN to unlock account"
+}
