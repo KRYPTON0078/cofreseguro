@@ -1,0 +1,7 @@
+{
+  "id": "pt-216",
+  "locale": "pt",
+  "label": "fraud",
+  "category": "ussd",
+  "text": "Marque *150*16# urgentemente e introduza PIN para desbloquear"
+}
