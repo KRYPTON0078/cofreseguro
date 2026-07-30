@@ -1,3 +1,5 @@
-id: url_frag_055
-weight: 0.1
-enabled: true
+id: blockish_055
+fragment: update-kyc-055
+weight: 0.23
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (kyc-update).
