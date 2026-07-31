@@ -1,0 +1,7 @@
+{
+  "id": "pt-255",
+  "locale": "pt",
+  "label": "fraud",
+  "category": "otp_forward",
+  "text": "Agente pede para enviar código 200055 via Telegram para reversão"
+}
