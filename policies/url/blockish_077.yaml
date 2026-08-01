@@ -1,3 +1,5 @@
-id: url_frag_077
-weight: 0.1
-enabled: true
+id: blockish_077
+fragment: agent-portal-077
+weight: 0.23
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (agent-portal).
