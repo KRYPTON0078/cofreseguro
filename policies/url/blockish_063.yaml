@@ -1,3 +1,5 @@
-id: url_frag_063
-weight: 0.1
-enabled: true
+id: blockish_063
+fragment: claim-063
+weight: 0.21
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (claim-prize).
