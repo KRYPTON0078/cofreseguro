@@ -1,3 +1,5 @@
-id: url_frag_074
-weight: 0.1
-enabled: true
+id: blockish_074
+fragment: unlock-wallet-074
+weight: 0.22
+reason: suspicious_path_or_host_token
+notes: Demo blockish fragment for phishing URL path heuristics (wallet-unlock).
