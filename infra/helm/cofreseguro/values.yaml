@@ -1,4 +1,38 @@
 replicaCount: 1
+
 image:
   repository: cofreseguro-api
-  tag: "0.1.0"
+  tag: "0.2.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: false
+  className: ""
+  hosts:
+    - host: cofreseguro.local
+      paths:
+        - path: /
+          pathType: Prefix
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+env:
+  ENVIRONMENT: production
+  OLLAMA_ENABLED: "false"
+  DATABASE_URL: "sqlite+aiosqlite:////data/cofreseguro.db"
+
+jwtSecret: "change-me-in-production-use-long-random-string"
+
+persistence:
+  enabled: true
+  size: 1Gi
