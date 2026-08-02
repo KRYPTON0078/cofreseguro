@@ -1,5 +1,2 @@
-# pdb
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: cofreseguro-pdb
+# Optional PodDisruptionBudget template placeholder kept for chart completeness.
+# Enable via values when needed in a full cluster install.
