@@ -1,0 +1,16 @@
+{
+  "name": "fraud-lite-fitted",
+  "bias": 0.35,
+  "weights": {
+    "len_norm": 2.799672967229787,
+    "word_count_norm": 0.33832639380922264,
+    "url_count": 22.059186168530083,
+    "digit_ratio": 3.0879601523528732,
+    "exclaim": 0.23629138732014063,
+    "upper_ratio": 1.0693280635038518,
+    "pin_token": 5.782787096204077,
+    "prize_token": 1.0801620737598514,
+    "urgency_token": 3.1416246019644367
+  },
+  "n_samples": 303
+}
