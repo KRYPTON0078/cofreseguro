@@ -14,7 +14,7 @@ from cofreseguro.auth.router import get_current_user
 from cofreseguro.behaviour.profile import update_behaviour
 from cofreseguro.shared.database import get_session_factory
 from cofreseguro.shared.metrics import ANALYSES_TOTAL
-from cofreseguro.shared.models import Analysis, User
+from cofreseguro.shared.models import Analysis, UrlCheck, User
 
 router = APIRouter(prefix="/v1", tags=["analyze"])
 
@@ -53,6 +53,16 @@ async def analyze(body: AnalyzeIn, user: User = Depends(get_current_user)) -> An
             engine=result.engine,
         )
         session.add(row)
+        await session.flush()
+        for u in result.url_scores:
+            session.add(
+                UrlCheck(
+                    analysis_id=row.id,
+                    url=str(u.get("url", "")),
+                    score=float(u.get("score", 0.0)),
+                    reasons=json.dumps(u.get("reasons") or []),
+                )
+            )
         await session.commit()
         await session.refresh(row)
         analysis_id = row.id
@@ -92,7 +102,7 @@ async def history(limit: int = 20, user: User = Depends(get_current_user)) -> li
                 select(Analysis)
                 .where(Analysis.user_id == user.id)
                 .order_by(desc(Analysis.id))
-                .limit(limit)
+                .limit(min(limit, 100))
             )
         ).scalars().all()
     return [
@@ -104,6 +114,7 @@ async def history(limit: int = 20, user: User = Depends(get_current_user)) -> li
             "tip": r.tip,
             "created_at": r.created_at.isoformat() if r.created_at else None,
             "text_preview": r.text[:120],
+            "engine": r.engine,
         }
         for r in rows
     ]
