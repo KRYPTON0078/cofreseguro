@@ -55,6 +55,7 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
       error = null;
     });
     final api = context.read<ApiClient>();
+    final nav = Navigator.of(context);
     try {
       final bytes = await file.readAsBytes();
       final result = await api.analyzeImage(
@@ -65,7 +66,7 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
             session.locale,
           );
       if (!mounted) return;
-      await Navigator.of(context).push(
+      await nav.push(
         MaterialPageRoute(builder: (_) => ResultScreen(result: result)),
       );
     } catch (e) {
