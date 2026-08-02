@@ -20,3 +20,6 @@ mobile/.flutter-plugins-dependencies
 .vscode/
 scripts/_commit_manifest.txt
 scripts/_gen_cofreseguro.py
+scripts/_commit_manifest_phase2.txt
+scripts/_gen_phase2.py
+scripts/_gen_cofreseguro.py
