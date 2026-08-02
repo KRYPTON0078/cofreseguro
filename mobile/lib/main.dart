@@ -4,32 +4,43 @@ import 'services/api_client.dart';
 import 'services/session.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_shell.dart';
+import 'l10n/app_strings.dart';
 
-void main() {
-  runApp(const CofreSeguroApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final session = SessionState();
+  await session.load();
+  runApp(CofreSeguroApp(session: session));
 }
 
 class CofreSeguroApp extends StatelessWidget {
-  const CofreSeguroApp({super.key});
+  const CofreSeguroApp({super.key, required this.session});
+  final SessionState session;
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => SessionState()),
-        Provider(create: (_) => ApiClient(baseUrl: 'http://localhost:8080')),
+        ChangeNotifierProvider.value(value: session),
+        Provider(create: (_) => ApiClient()),
       ],
-      child: MaterialApp(
-        title: 'CofreSeguro',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFF0F5C4C),
-            brightness: Brightness.light,
-          ),
-          useMaterial3: true,
-        ),
-        home: const RootGate(),
+      child: Consumer<SessionState>(
+        builder: (context, s, _) {
+          final t = AppStrings(s.locale);
+          return MaterialApp(
+            title: 'CofreSeguro',
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: const Color(0xFF0F5C4C),
+                brightness: Brightness.light,
+              ),
+              useMaterial3: true,
+            ),
+            home: const RootGate(),
+            onGenerateTitle: (_) => t.appName,
+          );
+        },
       ),
     );
   }
