@@ -2,20 +2,22 @@
 
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import PlainTextResponse
-from sqlalchemy import select
+from fastapi.responses import JSONResponse, PlainTextResponse
+from sqlalchemy import select, text
 
 from cofreseguro import __version__
 from cofreseguro.analyze.router import router as analyze_router
 from cofreseguro.auth.router import router as auth_router
 from cofreseguro.auth.security import hash_password
+from cofreseguro.behaviour.router import router as behaviour_router
 from cofreseguro.shared.config import get_settings
-from cofreseguro.shared.database import get_session_factory, init_db
+from cofreseguro.shared.database import get_engine, get_session_factory, init_db
 from cofreseguro.shared.logging import configure_logging, get_logger
 from cofreseguro.shared.metrics import metrics_response
 from cofreseguro.shared.models import User
+from cofreseguro.shared.rate_limit import analyze_limiter
 
 configure_logging()
 logger = get_logger("api")
@@ -64,6 +66,15 @@ def create_app() -> FastAPI:
     )
     app.include_router(auth_router)
     app.include_router(analyze_router)
+    app.include_router(behaviour_router)
+
+    @app.middleware("http")
+    async def rate_limit_analyze(request: Request, call_next):
+        if request.url.path.startswith("/v1/analyze"):
+            client = request.client.host if request.client else "unknown"
+            if not analyze_limiter.allow(client):
+                return JSONResponse({"detail": "rate limit exceeded"}, status_code=429)
+        return await call_next(request)
 
     @app.get("/health")
     async def health() -> dict:
@@ -73,6 +84,18 @@ def create_app() -> FastAPI:
             "version": __version__,
             "ollama_enabled": settings.ollama_enabled,
         }
+
+    @app.get("/ready")
+    async def ready():
+        try:
+            async with get_engine().connect() as conn:
+                await conn.execute(text("SELECT 1"))
+            return {"status": "ready", "database": "ok"}
+        except Exception as exc:  # noqa: BLE001
+            return JSONResponse(
+                {"status": "not_ready", "database": str(exc)},
+                status_code=503,
+            )
 
     @app.get("/metrics")
     async def metrics() -> PlainTextResponse:
