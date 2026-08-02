@@ -23,6 +23,18 @@ TIPS: dict[str, dict[str, str]] = {
         "en": "Avoid shortened links in money-related SMS. Type the official site yourself.",
         "pt": "Evite links encurtados em SMS sobre dinheiro. Escreva o site oficial.",
     },
+    "account_threat": {
+        "en": "Fear messages about locked accounts are common bait. Verify in-app only.",
+        "pt": "Mensagens de conta bloqueada são isco comum. Verifique só na app.",
+    },
+    "refund_scam": {
+        "en": "Refunds never require your PIN. Ignore SMS that ask for codes.",
+        "pt": "Reembolsos nunca pedem PIN. Ignore SMS que pedem códigos.",
+    },
+    "social_redirect": {
+        "en": "Move conversations to official channels; ignore WhatsApp PIN requests.",
+        "pt": "Use canais oficiais; ignore pedidos de PIN no WhatsApp.",
+    },
     "default": {
         "en": "When in doubt, stop and verify using the official app or helpline.",
         "pt": "Em caso de dúvida, pare e verifique pela app oficial ou linha de apoio.",
