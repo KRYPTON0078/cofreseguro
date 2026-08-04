@@ -17,7 +17,7 @@
 # API docs: http://localhost:8080/docs
 ```
 
-Local without Docker:
+Local without Docker side:
 
 ```bash
 cd backend && pip install -e ".[dev]"
